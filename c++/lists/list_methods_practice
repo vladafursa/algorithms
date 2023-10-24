@@ -1,0 +1,64 @@
+#include <iostream>
+#include <list>
+#include <string>
+using namespace std;
+int main(int argc, const char * argv[]) {
+    list<string> shoppingList;
+    //1
+    cout<<"task 1"<<endl;
+    cout<<endl;
+    for(auto i=shoppingList.begin(); i!=shoppingList.end();i++){
+        cout<<*i<<";"<<endl;
+    }
+    //2
+    cout<<"task 2"<<endl;
+    cout<<endl;
+    shoppingList.push_back("eggs");
+    shoppingList.push_back("milk");
+    shoppingList.push_back("sugar");
+    shoppingList.push_back("chocolate");
+    shoppingList.push_back("flour");
+    for(auto i=shoppingList.begin(); i!=shoppingList.end();i++){
+        cout<<*i<<";"<<endl;
+    }
+    //3
+    cout<<endl;
+    cout<<"task 3"<<endl;
+    cout<<endl;
+    shoppingList.pop_back();
+    for(auto i=shoppingList.begin(); i!=shoppingList.end();i++){
+        cout<<*i<<";"<<endl;
+    }
+    //4
+    cout<<endl;
+    cout<<"task 4"<<endl;
+    cout<<endl;
+    shoppingList.push_back("coffee");
+    for(auto i=shoppingList.begin(); i!=shoppingList.end();i++){
+        cout<<*i<<";"<<endl;
+    }
+    //5
+    cout<<endl;
+    cout<<"task 5"<<endl;
+    cout<<endl;
+    for(auto i=shoppingList.begin(); i!=shoppingList.end();i++){
+        if(*i=="sugar"){
+            *i="honey";
+        }
+        cout<<*i<<";"<<endl;
+    }
+    //6
+    
+    cout<<endl;
+    cout<<"task 6"<<endl;
+    cout<<endl;
+    for (auto i = shoppingList.begin(); i != shoppingList.end();) {
+        if (*i == "milk") {
+            i = shoppingList.erase(i);
+        } else {
+            cout << *i << ";" << endl;
+            ++i;
+        }
+    }
+    return 0;
+}
